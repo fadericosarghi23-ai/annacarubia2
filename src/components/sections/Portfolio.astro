@@ -38,16 +38,22 @@ const anteprima = progetti.slice(0, 4);
         Tutti i progetti →
       </a>
     </header>
+  </div>
 
     {/*
       Anteprima: quattro progetti che attraversano lo schermo in orizzontale
       mentre la pagina resta bloccata. La vetrina completa, con tutti e sei,
       resta nella scheda.
+      Il binario sta FUORI da container-content, come in Metodo e Ambiti: e'
+      tarato sulla larghezza della finestra (rientro iniziale = margine della
+      colonna). Dentro la colonna il rientro si sommava al margine e le card
+      venivano tagliate ai bordi della colonna: sugli schermi larghi la prima
+      card partiva a meta' pagina e lo scorrimento sembrava gia' avviato.
     */}
     <div data-landing-only class="mt-10">
       <div data-binario-scena>
         <div data-binario-pin>
-          <ul data-binario style="--binario-pannello:38vw; --binario-gap:32px">
+          <ul data-binario class="container-content" style="--binario-pannello:38vw; --binario-gap:32px">
             {
               anteprima.map((x) => (
                 <li>
@@ -97,8 +103,6 @@ const anteprima = progetti.slice(0, 4);
         </a>
       </div>
     </div>
-
-  </div>
 
   {/*
     Scheda: tutti e trenta i progetti del portfolio, con il filtro in testa.

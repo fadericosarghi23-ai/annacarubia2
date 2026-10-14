@@ -440,7 +440,11 @@ body[data-view='tab'] [data-section].is-active {
        finestra, altrimenti non c'e' niente da far scorrere. */
     max-width: none;
     margin-inline: 0;
-    padding-inline-start: max(32px, calc((100vw - var(--container-content)) / 2));
+    /* Prima card allineata al testo della colonna. Il 100% e' la larghezza del
+       riquadro (senza la barra di scorrimento, che 100vw invece include) e i 32px
+       sono il margine interno di container-content: con 100vw la prima card
+       partiva ~25px a sinistra del titolo. */
+    padding-inline-start: max(32px, calc((100% - var(--container-content)) / 2 + 32px));
     padding-inline-end: 8vw;
     will-change: transform;
   }
