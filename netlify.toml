@@ -1,0 +1,45 @@
+# Canonical su un solo host e una sola convenzione di slash (sempre con slash
+# finale, come astro.config.mjs -> trailingSlash: 'always').
+[build]
+  # Il check dei link fa fallire il deploy se compare un href vuoto, un
+  # placeholder o un link interno rotto.
+  command = "npm run build && npm run check:links"
+  publish = "dist"
+
+[build.environment]
+  # Astro 7 richiede Node >= 22.12 (vedi engines in package.json): con la 20
+  # il build fallisce in partenza.
+  NODE_VERSION = "22"
+
+# Un solo host: apex -> www, cosi' il canonical non ha doppioni.
+# [[DA COMPILARE: dominio di produzione]] — togliere il commento alle righe
+# sotto e mettere il dominio vero (apex in "from", www in "to").
+# [[redirects]]
+#   from = "https://dominio-da-compilare.example/*"
+#   to = "https://www.dominio-da-compilare.example/:splat"
+#   status = 301
+#   force = true
+
+# Pagine interne non ancora costruite: finche' non esistono, i link portano
+# alla sezione corrispondente della landing (site.ts apre la scheda giusta
+# leggendo l'ancora). 302 = temporaneo: si tolgono quando le pagine ci sono.
+# /privacy-policy/ resta fuori apposta: va scritta con i dati legali.
+[[redirects]]
+  from = "/progetti/*"
+  to = "/#portfolio"
+  status = 302
+
+[[redirects]]
+  from = "/chi-siamo/"
+  to = "/#mission"
+  status = 302
+
+[[redirects]]
+  from = "/contatti/"
+  to = "/#contatti"
+  status = 302
+
+[[headers]]
+  for = "/_astro/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"

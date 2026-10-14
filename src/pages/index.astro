@@ -1,0 +1,25 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Hero from '../components/sections/Hero.astro';
+import Mission from '../components/sections/Mission.astro';
+import Marquee from '../components/sections/Marquee.astro';
+import Metodo from '../components/sections/Metodo.astro';
+import Ambiti from '../components/sections/Ambiti.astro';
+import Portfolio from '../components/sections/Portfolio.astro';
+import Contatti from '../components/sections/Contatti.astro';
+---
+
+{/* INVENTATO: meta title e description (la mappa non li ha). */}
+<BaseLayout
+  title="Anna Carubia Architetto | Interior design a Bergamo"
+  description="Architetto d'interni in provincia di Bergamo: case, piccoli spazi, uffici e outdoor su misura, con rilievo laser scanner e cantiere seguito fino alla consegna."
+  path="/"
+>
+  <Hero />
+  <Mission />
+  <Marquee />
+  <Metodo />
+  <Ambiti />
+  <Portfolio />
+  <Contatti />
+</BaseLayout>

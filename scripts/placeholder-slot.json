@@ -1,0 +1,68 @@
+[
+  {
+    "file": "src/assets/img/ritratto-fondatore.jpg",
+    "w": 2304,
+    "h": 3456,
+    "etichetta": "RITRATTO TITOLARE"
+  },
+  {
+    "file": "src/assets/img/progetti-extra/extra-01.jpg",
+    "w": 1920,
+    "h": 1080,
+    "etichetta": "FOTO EXTRA 01"
+  },
+  {
+    "file": "src/assets/img/progetti-extra/extra-02.jpg",
+    "w": 1920,
+    "h": 1080,
+    "etichetta": "FOTO EXTRA 02"
+  },
+  {
+    "file": "src/assets/img/progetti-extra/extra-03.jpg",
+    "w": 1500,
+    "h": 1000,
+    "etichetta": "FOTO EXTRA 03"
+  },
+  {
+    "file": "src/assets/img/progetti-extra/extra-04.jpg",
+    "w": 1500,
+    "h": 1000,
+    "etichetta": "FOTO EXTRA 04"
+  },
+  {
+    "file": "src/assets/img/progetti-extra/extra-05.jpg",
+    "w": 1500,
+    "h": 1000,
+    "etichetta": "FOTO EXTRA 05"
+  },
+  {
+    "file": "src/assets/img/progetti-extra/extra-06.jpg",
+    "w": 1500,
+    "h": 1000,
+    "etichetta": "FOTO EXTRA 06"
+  },
+  {
+    "file": "src/assets/img/progetti-extra/extra-07.jpg",
+    "w": 2000,
+    "h": 1334,
+    "etichetta": "FOTO EXTRA 07"
+  },
+  {
+    "file": "src/assets/img/progetti-extra/extra-08.jpg",
+    "w": 2000,
+    "h": 1334,
+    "etichetta": "FOTO EXTRA 08"
+  },
+  {
+    "file": "src/assets/img/progetti-extra/extra-09.jpg",
+    "w": 2000,
+    "h": 1334,
+    "etichetta": "FOTO EXTRA 09"
+  },
+  {
+    "file": "src/assets/img/progetti-extra/extra-10.jpg",
+    "w": 2000,
+    "h": 1333,
+    "etichetta": "FOTO EXTRA 10"
+  }
+]

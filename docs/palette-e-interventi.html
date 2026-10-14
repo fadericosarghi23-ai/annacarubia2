@@ -1,0 +1,227 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<title>Anna Carubia Architetto — Palette e interventi</title>
+<style>
+  @page { size: A4; margin: 13mm 13mm 11mm; }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    font-family: "Segoe UI", Arial, Helvetica, sans-serif;
+    font-size: 8.6pt;
+    line-height: 1.38;
+    color: #282933;
+  }
+  .pagina { page-break-after: always; }
+  .pagina:last-child { page-break-after: auto; }
+  h1 { font-size: 18pt; margin: 0 0 1.5mm; letter-spacing: -0.01em; }
+  h1 + .occhiello { margin: 0 0 4mm; color: #717171; font-size: 9pt; letter-spacing: .08em; text-transform: uppercase; }
+  h2 { font-size: 11pt; margin: 5mm 0 2mm; padding-bottom: 1.2mm; border-bottom: 1px solid #eaeaea; }
+  h2:first-of-type { margin-top: 0; }
+  h3 { font-size: 9.2pt; margin: 3mm 0 1.2mm; }
+  p { margin: 0 0 2mm; }
+  ul { margin: 0 0 2.5mm; padding-left: 4.5mm; }
+  li { margin-bottom: 0.8mm; }
+  table { width: 100%; border-collapse: collapse; margin-bottom: 2.5mm; font-size: 8pt; }
+  th, td { text-align: left; padding: 1.1mm 1.6mm; border-bottom: 1px solid #eaeaea; vertical-align: top; }
+  th { color: #717171; font-weight: 600; font-size: 7.2pt; letter-spacing: .06em; text-transform: uppercase; }
+  code { font-family: Consolas, "Courier New", monospace; font-size: 7.6pt; background: #f8f8f8; padding: 0 1mm; }
+  .campione { display: inline-block; width: 4mm; height: 4mm; border-radius: .6mm; border: 1px solid #dcdcdc; vertical-align: -0.6mm; margin-right: 1.5mm; }
+  .ok { color: #0f7a8e; font-weight: 600; }
+  .ko { color: #b23b3b; font-weight: 600; }
+  .nota { background: #f8f8f8; border-left: 2px solid #0f7a8e; padding: 2mm 2.5mm; margin: 0 0 2.5mm; }
+  .nota strong { display: block; margin-bottom: 1mm; }
+  .due { display: flex; gap: 6mm; }
+  .due > * { flex: 1; min-width: 0; }
+  .piede { margin-top: 4mm; padding-top: 2mm; border-top: 1px solid #eaeaea; color: #717171; font-size: 8pt; }
+  .fascia { display: flex; height: 9mm; border-radius: 1mm; overflow: hidden; border: 1px solid #dcdcdc; margin: 0 0 3mm; }
+  .fascia span { flex: 1; }
+</style>
+</head>
+<body>
+
+<section class="pagina">
+  <h1>Anna Carubia Architetto</h1>
+  <p class="occhiello">Palette, errori corretti e migliorie — 14 ottobre 2026</p>
+
+  <h2>1. Palette</h2>
+  <p>
+    La cliente non ha un sito e non ha una palette di marchio: la mappa dei contenuti la segna
+    <strong>«da fornire»</strong> e vieta di inventare valori. Il sito usa quindi la palette della
+    base su cui è costruito. Il logo provvisorio (la «A» della scheda BNI) è grigio, cioè
+    acromatico: non offre un colore da cui partire.
+  </p>
+
+  <div class="fascia">
+    <span style="background:#1bb0ce"></span><span style="background:#0f7a8e"></span><span style="background:#5fc7db"></span><span style="background:#282933"></span><span style="background:#4b4c51"></span><span style="background:#16202f"></span><span style="background:#717171"></span><span style="background:#f8f8f8"></span><span style="background:#ffffff"></span><span style="background:#1a1a1a"></span>
+  </div>
+
+  <table>
+    <tr><th>Token</th><th>Hex</th><th>A cosa serve</th></tr>
+    <tr><td><span class="campione" style="background:#1bb0ce"></span><code>--color-brand</code></td><td>#1bb0ce</td><td>Marchio: decorazioni, occhielli e testo <em>su fondo scuro</em></td></tr>
+    <tr><td><span class="campione" style="background:#0f7a8e"></span><code>--color-brand-ink</code></td><td>#0f7a8e</td><td>Variante scura: testo, link e bottone primario su fondo chiaro</td></tr>
+    <tr><td><span class="campione" style="background:#5fc7db"></span><code>--color-brand-soft</code></td><td>#5fc7db</td><td>Variante chiara: solo decorazioni, mai testo</td></tr>
+    <tr><td><span class="campione" style="background:#282933"></span><code>--color-ink</code></td><td>#282933</td><td>Titoli; fondo delle sezioni scure (Metodo, Contatti)</td></tr>
+    <tr><td><span class="campione" style="background:#4b4c51"></span><code>--color-body</code></td><td>#4b4c51</td><td>Testo corrente</td></tr>
+    <tr><td><span class="campione" style="background:#16202f"></span><code>--color-quote</code></td><td>#16202f</td><td>Citazione della sezione «Chi sono»</td></tr>
+    <tr><td><span class="campione" style="background:#717171"></span><code>--color-muted</code></td><td>#717171</td><td>Micro-testi (categorie, località, etichette)</td></tr>
+    <tr><td><span class="campione" style="background:#ffffff"></span><code>--color-paper</code></td><td>#ffffff</td><td>Fondo chiaro, navbar</td></tr>
+    <tr><td><span class="campione" style="background:#f8f8f8"></span><code>--color-surface</code></td><td>#f8f8f8</td><td>Fondo delle sezioni alternate</td></tr>
+    <tr><td><span class="campione" style="background:#eaeaea"></span><code>--color-line</code> / <code>-soft</code></td><td>#eaeaea / #dcdcdc</td><td>Bordi delle card, divisori</td></tr>
+    <tr><td><span class="campione" style="background:#1a1a1a"></span><code>--color-footer</code></td><td>#1a1a1a</td><td>Fondo del footer</td></tr>
+  </table>
+
+  <div class="nota">
+    <strong>Come si cambia quando arriva la palette della cliente</strong>
+    Solo i token in <code>src/styles/global.css</code> (blocco <code>@theme</code>), più lo stesso colore di
+    marchio in <code>theme-color</code> (<code>BaseLayout.astro</code>) e <code>theme_color</code>
+    (<code>public/site.webmanifest</code>). Nessun componente va toccato. Il marchio resta sdoppiato:
+    un tono per il testo su chiaro (almeno 4,5:1 su bianco) e uno per le decorazioni e il fondo scuro.
+  </div>
+
+  <h2>2. Contrasto del testo (WCAG 2.1, soglia AA 4,5:1)</h2>
+  <div class="due">
+    <table>
+      <tr><th>Coppia</th><th>Rapporto</th><th></th></tr>
+      <tr><td>Body su bianco</td><td>8,57</td><td class="ok">AA</td></tr>
+      <tr><td>Body su surface</td><td>8,07</td><td class="ok">AA</td></tr>
+      <tr><td>Ink (titoli) su bianco</td><td>14,43</td><td class="ok">AAA</td></tr>
+      <tr><td>Muted su bianco</td><td>4,88</td><td class="ok">AA</td></tr>
+      <tr><td>Muted su surface</td><td>4,60</td><td class="ok">AA</td></tr>
+      <tr><td>Brand-ink su bianco</td><td>5,01</td><td class="ok">AA</td></tr>
+      <tr><td>Brand-ink su surface</td><td>4,71</td><td class="ok">AA</td></tr>
+    </table>
+    <table>
+      <tr><th>Coppia</th><th>Rapporto</th><th></th></tr>
+      <tr><td>Bianco su brand-ink (bottone)</td><td>5,01</td><td class="ok">AA</td></tr>
+      <tr><td>Brand su ink (occhielli scuri)</td><td>5,60</td><td class="ok">AA</td></tr>
+      <tr><td>Bianco 50% su ink (esito form)</td><td>4,78</td><td class="ok">AA</td></tr>
+      <tr><td>Bianco 60% su ink (etichette)</td><td>6,16</td><td class="ok">AA</td></tr>
+      <tr><td>Bianco 60% su footer</td><td>6,90</td><td class="ok">AA</td></tr>
+      <tr><td>Brand su footer (hover)</td><td>6,75</td><td class="ok">AA</td></tr>
+      <tr><td>Brand su bianco</td><td>2,58</td><td class="ko">solo decoro</td></tr>
+    </table>
+  </div>
+  <p>
+    Tutte le coppie usate per il testo superano AA. Il marchio puro <code>#1bb0ce</code> su bianco
+    non la supera: è verificato che nel sito compaia come testo <strong>solo su fondo scuro</strong>
+    (footer, contatti, form, mappa, card del metodo). Sopra le foto dell'hero il testo è bianco
+    su velo scuro.
+  </p>
+</section>
+
+<section class="pagina">
+  <h2>3. Errori corretti</h2>
+  <p>Trovati nel controllo pre-deploy su Netlify e nel riempimento. Tutti verificati sulla build.</p>
+  <table>
+    <tr><th style="width:27%">Errore</th><th style="width:33%">Effetto sul sito online</th><th>Correzione</th></tr>
+    <tr>
+      <td>Canonical, Open Graph, JSON-LD e sitemap puntavano a <code>dominio-da-compilare.example</code></td>
+      <td>Google e i social avrebbero indicizzato e condiviso un dominio inesistente</td>
+      <td>Il dominio arriva dalla variabile <code>URL</code> di Netlify a ogni build (il <code>*.netlify.app</code>, poi il dominio vero appena collegato). Nessun valore da scrivere a mano.</td>
+    </tr>
+    <tr>
+      <td><code>robots.txt</code> statico con il dominio finto nella riga Sitemap</td>
+      <td>Sitemap irraggiungibile per i motori di ricerca</td>
+      <td>Generato in build (<code>src/pages/robots.txt.ts</code>) con lo stesso dominio del canonical.</td>
+    </tr>
+    <tr>
+      <td>Link a pagine interne non ancora costruite: <code>/progetti/…</code> (16 schede progetto, 4 ambiti), <code>/chi-siamo/</code>, <code>/contatti/</code></td>
+      <td>Ogni card progetto, ogni ambito e due CTA portavano a una pagina 404</td>
+      <td>Redirect temporanei (302) in <code>netlify.toml</code> verso la sezione giusta della landing, che si apre come scheda. Da togliere quando le pagine esisteranno.</td>
+    </tr>
+    <tr>
+      <td>Dati strutturati con email e social segnaposto</td>
+      <td>JSON-LD non valido per Google</td>
+      <td>Nel JSON-LD entrano solo i valori reali; i segnaposto vengono esclusi in automatico.</td>
+    </tr>
+    <tr>
+      <td>Link Instagram e Facebook con URL segnaposto</td>
+      <td>Clic → pagina 404</td>
+      <td>La colonna «Social» del footer compare solo quando c'è almeno un URL vero.</td>
+    </tr>
+    <tr>
+      <td>Rigenerazione dei placeholder (<code>npm run placeholder</code>) ancora attiva sulle foto inserite</td>
+      <td>Un comando avrebbe sovrascritto le 24 foto con riquadri grigi</td>
+      <td>Gli slot riempiti sono stati tolti da <code>scripts/placeholder-slot.json</code>.</td>
+    </tr>
+    <tr>
+      <td>Titolo «Casa a due piani» su una foto di casa a tre livelli</td>
+      <td>Testo e immagine in contraddizione</td>
+      <td>Titolo cambiato in «Casa su tre livelli», in vetrina e in griglia.</td>
+    </tr>
+    <tr>
+      <td>Bottone contatto in navbar: «Scrivimi»</td>
+      <td>—</td>
+      <td>Ora «Contattami», come richiesto; verificato che non mandi la navbar in overflow anche a 1025 px, la larghezza desktop minima.</td>
+    </tr>
+  </table>
+
+  <h2>4. Migliorie effettuate</h2>
+  <ul>
+    <li><strong>Contenuti</strong>: tutti gli slot di testo riempiti. Quelli dalla mappa sono marcati <code>// MAPPA</code>; quelli scritti da noi <code>INVENTATO</code>, elencati in <code>TESTI-INVENTATI.md</code> per la validazione con la cliente. Voce in prima persona, coerente con la bio.</li>
+    <li><strong>Servizi</strong>: tutti e 7 i servizi della mappa nel nastro scorrevole (la base ne prevedeva 5): l'animazione regge senza modifiche.</li>
+    <li><strong>Foto</strong>: 24 foto stock Unsplash (uso commerciale libero) al posto dei placeholder, scelte una per una e ritagliate alla misura esatta di ogni slot, quindi impaginazione e animazioni non si spostano. <code>alt</code> descrittivi. Ogni foto è marcata <code>FOTO STOCK</code> con il link alla fonte.</li>
+    <li><strong>Logo e favicon</strong> provvisori dalla scheda BNI, con un'animazione d'apertura (la «A» si disegna, poi si aprono le ante), una volta per sessione e disattivata con «riduci animazioni».</li>
+    <li><strong>Mappa</strong> Google sull'indirizzo di Songavazzo, con il filtro nei colori della palette.</li>
+    <li><strong>SEO di base</strong>: title e description, Open Graph con immagine 1500×1000, JSON-LD <code>ProfessionalService</code> con indirizzo e telefono, sitemap, robots.</li>
+  </ul>
+
+  <h3>Verifiche eseguite</h3>
+  <table>
+    <tr><th>Controllo</th><th>Esito</th></tr>
+    <tr><td>Build da zero come su Netlify (senza lockfile, Node 22+, Astro 7.3.8)</td><td class="ok">ok</td></tr>
+    <tr><td><code>astro check</code> (tipi e template)</td><td class="ok">0 errori</td></tr>
+    <tr><td>Controllo link post-build (<code>check:links</code>, gira anche nel deploy)</td><td class="ok">nessun link rotto</td></tr>
+    <tr><td>Smoke test su Chrome: carosello, schede, binari orizzontali, filtro, form, mappa, menu mobile, console</td><td class="ok">34/34</td></tr>
+    <tr><td>Mobile 375 px: niente scroll orizzontale, nessuna immagine rotta, console pulita</td><td class="ok">ok</td></tr>
+    <tr><td>Contrasto del testo (sezione 2)</td><td class="ok">AA su tutte le coppie</td></tr>
+  </table>
+</section>
+
+<section class="pagina">
+  <h2>5. Da chiudere prima di pubblicare per il pubblico</h2>
+  <p>
+    Il sito si può mettere online su Netlify come <strong>anteprima per la cliente</strong>. Prima di
+    renderlo pubblico servono questi dati, che non si possono inventare:
+  </p>
+  <table>
+    <tr><th style="width:30%">Cosa</th><th style="width:30%">Oggi a video</th><th>Cosa serve</th></tr>
+    <tr><td>Email</td><td>Segnaposto visibile in footer, contatti, menu mobile</td><td>L'indirizzo da pubblicare (su BNI era nascosto)</td></tr>
+    <tr><td>Dati legali</td><td>Segnaposto nel footer</td><td>Ragione sociale o dicitura professionale, P.IVA, PEC; numero di iscrizione all'Ordine (oggi senza slot)</td></tr>
+    <tr><td>Privacy e cookie policy</td><td>Il link porta a una 404</td><td>La pagina, scritta con i dati legali</td></tr>
+    <tr><td>Form contatti</td><td>Valida i campi ma non invia, e lo dice</td><td>Email destinataria + servizio (Formspree, Netlify Forms…), in <code>src/scripts/site.ts</code> sezione 11</td></tr>
+    <tr><td>Social</td><td>Colonna nascosta</td><td>URL dei profili, se esistono</td></tr>
+    <tr><td>Palette</td><td>Quella della base</td><td>HEX della cliente, o da ricavare dal logo vettoriale</td></tr>
+    <tr><td>Logo</td><td>Raster BNI 400×400</td><td>Conferma che sia il suo, poi la versione SVG</td></tr>
+    <tr><td>Ritratto</td><td>Placeholder</td><td>Ritratto professionale HD (2304×3456)</td></tr>
+    <tr><td>Foto dei progetti</td><td>Stock Unsplash</td><td>Foto HD dei suoi lavori, con titolo, luogo, anno e tipologia per ciascuno</td></tr>
+    <tr><td>Testi inventati</td><td>Pubblicati, marcati nel codice</td><td>Validazione con la cliente (<code>TESTI-INVENTATI.md</code>)</td></tr>
+    <tr><td>Indirizzo</td><td>Via Piave 18, Songavazzo</td><td>Conferma che voglia pubblicarlo (alimenta anche la mappa)</td></tr>
+    <tr><td>Dominio</td><td>Il <code>*.netlify.app</code></td><td>Collegarlo in Netlify: canonical e sitemap si aggiornano da soli. Per apex → www c'è il redirect commentato in <code>netlify.toml</code></td></tr>
+  </table>
+
+  <div class="nota">
+    <strong>Elenco aggiornato in ogni momento</strong>
+    <code>npm run slot</code> elenca file e riga di ogni dato mancante; <code>grep -rn INVENTATO src</code>
+    tutti i testi da validare; <code>grep -rn "FOTO STOCK" src</code> tutte le foto da sostituire.
+  </div>
+
+  <h2>6. Tipografia (della base, nessun font di marchio)</h2>
+  <table>
+    <tr><th>Ruolo</th><th>Font</th><th>Dove</th></tr>
+    <tr><td>Display</td><td>Cormorant Garamond 400/500</td><td>Titoli, nomi dei progetti, numeri delle fasi</td></tr>
+    <tr><td>Testo</td><td>Poppins 400/500/700</td><td>Paragrafi, bottoni</td></tr>
+    <tr><td>Citazione</td><td>Prata 400</td><td>Frase della sezione «Chi sono»</td></tr>
+    <tr><td>Occhielli</td><td>Mulish 600/700</td><td>Occhielli, micro-testi, filtri</td></tr>
+  </table>
+
+  <p class="piede">
+    Deploy: <code>netlify.toml</code> esegue <code>npm run build &amp;&amp; npm run check:links</code>, pubblica
+    <code>dist/</code>, Node 22. Il deploy fallisce da solo se compare un link rotto.
+  </p>
+</section>
+
+</body>
+</html>
